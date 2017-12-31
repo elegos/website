@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/2017/12/31/hello-world/</url>
+      <content type="html"><![CDATA[<p>It is tradition in the developers’ world to start off a “Hello World” application.</p>
+<p>This is mine :D</p>
+<p>Sooooo… hello, world! This is the n-th declination of my website. I previously<br>wrote my website’s themes, using whatever implementation of “who knows” of a CMS.<br>I’ve now moved to Hexo, a minimalistic, static-generator blog / website application<br>written for node. So far, so great!</p>
+<p>This blog will focus on the things I do in my profession and in my side-works (more to follow).</p>
+<p>So… Keep calm and good retro style navigation!</p>
+]]></content>
+      
+        
+    </entry>
+    
+  
+  
+</search>
