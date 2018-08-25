@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Giacomo Furlan</title>
+    <link>https://giacomofurlan.name/</link>
+    <description>Recent content on Giacomo Furlan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 25 Aug 2018 01:41:18 +0200</lastBuildDate>
+    
+	<atom:link href="https://giacomofurlan.name/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>https://giacomofurlan.name/about/</link>
+      <pubDate>Sat, 25 Aug 2018 01:41:18 +0200</pubDate>
+      
+      <guid>https://giacomofurlan.name/about/</guid>
+      <description>An sincerity so extremity he additions. Her yet there truth merit. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.
+Received overcame oh sensible so at an. Formed do change merely to county it. Am separate contempt domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too.</description>
+    </item>
+    
+    <item>
+      <title>Error handling in Go</title>
+      <link>https://giacomofurlan.name/post/2017/12/31/error-handling-in-go/</link>
+      <pubDate>Sun, 31 Dec 2017 12:00:00 +0200</pubDate>
+      
+      <guid>https://giacomofurlan.name/post/2017/12/31/error-handling-in-go/</guid>
+      <description>Most of the programming languages support multiple ways of handling errors, for example try-catching, value-checking, popping errors in the stack. Learning go I found the approach of this language is way different: you can let a function return an error (and eventual result(s)), thus not throwing any kind of error, and not returning “special values” like, for example, PHP’s json_decode (which can return true, false, NULL, stdClass or even an array!</description>
+    </item>
+    
+  </channel>
+</rss>

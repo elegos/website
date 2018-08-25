@@ -10,29 +10,28 @@
              "@type": "WebPage",
              "@id": "https://giacomofurlan.name"
         },
-        "articleSection" : "",
-        "name" : "About me",
-        "headline" : "About me",
-        "description" : "An sincerity so extremity he additions. Her yet there truth merit. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.
-Received overcame oh sensible so at an. Formed do change merely to county it. Am separate contempt domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too.",
+        "articleSection" : "post",
+        "name" : "Error handling in Go",
+        "headline" : "Error handling in Go",
+        "description" : "Most of the programming languages support multiple ways of handling errors, for example try-catching, value-checking, popping errors in the stack. Learning go I found the approach of this language is way different: you can let a function return an error (and eventual result(s)), thus not throwing any kind of error, and not returning “special values” like, for example, PHP’s json_decode (which can return true, false, NULL, stdClass or even an array!",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
         "publisher": "",
         "accountablePerson" : "",
         "copyrightHolder" : "",
-        "copyrightYear" : "2018",
-        "datePublished": "2018-08-25 01:41:18 &#43;0200 CEST",
-        "dateModified" : "2018-08-25 01:41:18 &#43;0200 CEST",
-        "url" : "https://giacomofurlan.name/about/",
-        "wordCount" : "209",
-        "image" : https://giacomofurlan.name%!s(&lt;nil&gt;)",
-        "keywords" : [ "Blog" ]   
+        "copyrightYear" : "2017",
+        "datePublished": "2017-12-31 12:00:00 &#43;0200 &#43;0200",
+        "dateModified" : "2017-12-31 12:00:00 &#43;0200 &#43;0200",
+        "url" : "https://giacomofurlan.name/post/2017/12/31/error-handling-in-go/",
+        "wordCount" : "872",
+        "image" : https://giacomofurlan.name",
+        "keywords" : [ "go","error handling","Blog" ]   
     }
     </script>
 
 
- <title>About me </title>
+ <title>Error handling in Go </title>
 
 
 <meta name="description" content="Personal website of Giacomo Furlan" />
@@ -201,7 +200,7 @@ Received overcame oh sensible so at an. Formed do change merely to county it. Am
 
         
         <div class="entry-meta">
-          <span class="date">25 August</span>	<span> / </span>
+          <span class="date">31 December</span>	<span> / </span>
 
           <span class="author">
             
@@ -211,33 +210,170 @@ Received overcame oh sensible so at an. Formed do change merely to county it. Am
 
 
           
+          <span class="category">
+            <span> / </span>
+
+            <a href="/categories/go">go</a>
+          </span>
+          
 
 
         </div>
         <div class='entry-header'>
-          <h1 class='entry-title'> About me</h1>
+          <h1 class='entry-title'> Error handling in Go</h1>
         </div>
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              
+              <p>Most of the programming languages support multiple ways of handling errors, for example try-catching, value-checking, popping errors in the stack. Learning go I found the approach of this language is way different: you can let a function return an error (and eventual result(s)), thus not throwing any kind of error, and not returning “special values” like, for example, PHP’s <code>json_decode</code> (which can return <code>true</code>, <code>false</code>, <code>NULL</code>, <code>stdClass</code> or even an <code>array</code>!).</p>
 
-<p>An sincerity so extremity he additions. Her yet <strong>there truth merit</strong>. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.</p>
+<p>In this article I’ll describe what I found being (for me) the most elegant and convenient way of handling errors in Go.</p>
 
-<p>Received overcame oh sensible so at an. Formed do change merely to county it. <strong>Am separate contempt</strong> domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too. Replied exposed savings he no viewing as up. Soon body add him hill. No father living really people estate if. Mistake do produce beloved demesne if am pursuit.</p>
+<p>As I previously stated, error generation and handling in Go is made in a way like this:</p>
 
-<p><img src="/img/about.jpg" alt="This is me" /></p>
+<pre><code class="language-golang">import (
+  &quot;errors&quot;
+  &quot;fmt&quot;
+)
 
-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn&rsquo;t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+func division(dividend int32, divisor int32) (float64, error) {
+  if (divisor == 0) {
+    return 0, errors.New(&quot;Divisor is 0!&quot;)
+  }
 
-<h4 id="education">Education</h4>
+  return float64(dividend) / float64(divisor), nil
+}
+
+func main() {
+  result, err := division(2, 0)
+  if err != nil {
+    fmt.Println(fmt.Sprintf(&quot;%d/%d is not supported: %s&quot;, 2, 0, err))
+  } else {
+    fmt.Println(fmt.Sprintf(&quot;%d/%d = %.2f&quot;, 2, 0, result))
+  }
+}
+// Output: 2/0 is not supported: Divisor is 0!
+</code></pre>
+
+<p>The explanation is pretty simple: check if the error is not nil, and if it is, panic or handle the error. Which is fine, unless you have to read and check a series of data.</p>
+
+<p>I’ll reference myself in this by showing you a snippet of code of one mf my projects, <a href="https://github.com/elegos/nwn-toolset-go">NWN Toolset go</a>:</p>
+
+<pre><code class="language-golang">func extractHeader(file *os.File) (Header, error) {
+  var result = Header{}
+
+  bytes, err := fileReader.ReadAndCheck(file, 4)
+  if err != nil {
+    return result, err
+  }
+  result.FileType = strings.Trim(string(bytes), &quot;\x00&quot;)
+
+  bytes, err = fileReader.ReadAndCheck(file, 4)
+  if err != nil {
+    return result, err
+  }
+  result.Version = strings.Trim(string(bytes), &quot;\x00&quot;)
+
+  bytes, err = fileReader.ReadAndCheck(file, 4)
+  if err != nil {
+    return result, err
+  }
+  result.LanguageCount = fileReader.BytesToUint32LE(bytes)
+
+  bytes, err = fileReader.ReadAndCheck(file, 4)
+  if err != nil {
+    return result, err
+  }
+  result.LocalizedStringSize = fileReader.BytesToUint32LE(bytes)
+
+  bytes, err = fileReader.ReadAndCheck(file, 4)
+  if err != nil {
+    return result, err
+  }
+  result.EntryCount = fileReader.BytesToUint32LE(bytes)
+  // continues for a series of reads...
+
+  return result, nil
+}
+</code></pre>
+
+<p>And this is what I ended up with (magic explained later):</p>
+
+<pre><code class="language-golang">func extractHeader(file *os.File) (Header, error) {
+  var readerBag = fileReader.ByteReaderBag{File: file}
+  var result = Header{
+    FileType:                strings.Trim(fileReader.ReadStringFromBytes(&amp;readerBag, 4), &quot;\x00&quot;),
+    Version:                 strings.Trim(fileReader.ReadStringFromBytes(&amp;readerBag, 4), &quot;\x00&quot;),
+    LanguageCount:           fileReader.ReadUint32FromBytes(&amp;readerBag),
+    LocalizedStringSize:     fileReader.ReadUint32FromBytes(&amp;readerBag),
+    EntryCount:              fileReader.ReadUint32FromBytes(&amp;readerBag),
+    OffsetToLocalizedString: fileReader.ReadUint32FromBytes(&amp;readerBag),
+    OffsetToKeyList:         fileReader.ReadUint32FromBytes(&amp;readerBag),
+    OffsetToResourceList:    fileReader.ReadUint32FromBytes(&amp;readerBag),
+    BuildYear:               fileReader.ReadUint32FromBytes(&amp;readerBag),
+    BuildDay:                fileReader.ReadUint32FromBytes(&amp;readerBag),
+    DescriptionStrRef:       fileReader.ReadUint32FromBytes(&amp;readerBag),
+  }
+
+  var reservedBytes = fileReader.ReadBytes(&amp;readerBag, 116)
+
+  copy(result.Reserved[:], reservedBytes)
+
+  return result, readerBag.Err
+}
+</code></pre>
+
+<p>I assure you this code is 100% equivalent to the previous one, and it’s all of it (i.e. I didn’t truncate it). Much simplier, isn’t it?</p>
+
+<p>I’m not a genious and this is not all of my work. I took inspiration from this <a href="https://blog.golang.org/errors-are-values">go’s blog post</a>. More or less it rightfully states that errors are not 2nd grade citizens and they should be always read and checked against nil, but keeping reading them make the code become ugly very soon (see the previous example!).</p>
+
+<p>Here is explained the magic code, but first some definitions (strait from my project’s sources):</p>
+
+<pre><code class="language-golang">// ByteReaderBag container used to gracefully manage file reading errors
+type ByteReaderBag struct {
+  File *os.File
+  Err  error
+}
+
+// ReadAndCheck reads the data from the file and check whether it has been read
+func ReadAndCheck(file *os.File, toRead uint32) ([]byte, error) {
+  // Not important for this example, it reads the data and checks for the bytes read
+  // in case the read bytes are not the ones requested, it will return a valorised error
+}
+
+// ReadBytes read toRead bytes and store any error in the bag
+func ReadBytes(readerBag *ByteReaderBag, toRead uint32) []byte {
+  // do not process if there is already a previous error in the bag
+  if readerBag.Err != nil {
+    return nil
+  }
+
+  bytes, err := ReadAndCheck(readerBag.File, toRead)
+
+  if err != nil {
+    // this will prevent future readings to proceed
+    readerBag.Err = err
+
+    return nil
+  }
+
+  return bytes
+}
+</code></pre>
+
+<p>Let’s first analyse what we previously did in the first, verbose example: a cycle of reads, checking at each iteration the error, and in case returning the value with the error (stopping the code from running). This is what we need to continue behaving like, if we want to keep the same functionality.</p>
+
+<p><code>ByteReaderBag</code> is a struct which contains the reference of a file and an error. It is then passed by pointer to the reading function, which will, in few words, process the reading until an error occours, then it will stop processing, even if still allowing you to call it again and again without having to check the error. After all the calls to <code>ReadBytes</code> you can return or handle the error once, and the functionality will be preserved (stop to read in case of error and manage / return the error itself).</p>
+
+<p>This has some implications:</p>
 
 <ul>
-<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-<li>Aliquam tincidunt mauris eu risus.</li>
+<li>It’s way more readable</li>
+<li>It will allow programmers to not hate the code (:D)</li>
+<li>It will be way easier to test the code (and maximise the code coverage), having to test the error handling only in one function and not several times for each read/write/whatever. Please take a look at the tests of my project to have an idea (<a href="https://github.com/elegos/nwn-toolset-go/blob/master/src/aurora/file/erf/erf_test.go">testing using the reading function</a> and <a href="https://github.com/elegos/nwn-toolset-go/blob/master/src/aurora/tools/fileReader/fileReader_test.go">testing the error generation</a>).</li>
 </ul>
 
-<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</p>
+<p>Cool, huh? :)</p>
 
             </article>
           </div>
@@ -247,12 +383,17 @@ Received overcame oh sensible so at an. Formed do change merely to county it. Am
 
   <div class="entry-categories"><p><span>Categories</span>
     
+    <a href="/categories/go" title="View all posts in go">go</a>
   </p>
 </div>
 
 
 
 <div class="entry-tags"><p><span>Tags</span>
+  
+  <a href="/tags/go" title="View all posts tagged go">go</a>
+  
+  <a href="/tags/error-handling" title="View all posts tagged error handling">error handling</a>
   
 
 </p></div>	</div>

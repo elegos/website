@@ -1,245 +1,350 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
-  
-  <title>error handling | Giacomo Furlan</title>
-  <meta name="author" content="Giacomo Furlan">
-  
-  <meta name="description" content="Giacomo Furlan&#39;s programming blog">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https://giacomofurlan.name"
+        },
+        "articleSection" : "tags",
+        "name" : "Error Handling",
+        "headline" : "Error Handling",
+        "description" : "",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2017",
+        "datePublished": "2017-12-31 12:00:00 &#43;0200 &#43;0200",
+        "dateModified" : "2017-12-31 12:00:00 &#43;0200 &#43;0200",
+        "url" : "https://giacomofurlan.name/tags/error-handling/",
+        "wordCount" : "0",
+        "image" : https://giacomofurlan.name%!s(&lt;nil&gt;)",
+        "keywords" : [ "Blog" ]   
+    }
+    </script>
 
-  
-  <meta property="og:site_name" content="Giacomo Furlan"/>
 
-  
-    <meta property="og:image" content=""/>
-  
+ <title>Error Handling </title>
 
-  
-  
-    <link href="/favicon.png" rel="icon">
-  
-  
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-  <script src="/js/jquery-2.0.3.min.js"></script>
+<meta name="description" content="Personal website of Giacomo Furlan" />
 
-  <!-- analytics -->
-  
 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" id="ct-tracks-google-fonts-css" href="//fonts.googleapis.com/css?family=Raleway%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;ver=4.7.2" type="text/css" media="all">
+<link rel="stylesheet" href="https://giacomofurlan.name/css/font-awesome.min.css" type='text/css' media='all'>
+
+<link href="https://giacomofurlan.name/css/style.css" rel="stylesheet" id="theme-stylesheet" type='text/css' media='all'>
+
+<link href="https://giacomofurlan.name/css/custom.css" rel="stylesheet" type='text/css' media='all'>
+<link rel="shortcut icon" href="https://giacomofurlan.name/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://giacomofurlan.name/img/favicon.ico" type="image/x-icon">
+
+<link href="https://giacomofurlan.name/tags/error-handling/index.xml" rel="alternate" type="application/rss+xml" title="Giacomo Furlan" />
+<link href="https://giacomofurlan.name/tags/error-handling/index.xml" rel="feed" type="application/rss+xml" title="Giacomo Furlan" />
 
 
 </head>
 
- <body>  
-  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand" href="/">Giacomo Furlan</a>
-      <div class="collapse navbar-collapse nav-menu">
-		<ul class="nav navbar-nav">
-		  
-		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class=""></i>Archives
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/categories" title="All the categories.">
-			  <i class=""></i>Categories
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/about" title="About me.">
-			  <i class=""></i>About
-			</a>
-		  </li>
-		  
-		</ul>
+  <body class="home blog ct-body standard">
+    <div id="overflow-container" class="overflow-container">
+      <a class="skip-content" href="#main">Skip to content</a>
+      <header id="site-header" class="site-header" role="banner">
+        <div class='top-navigation'>
+          <div class='container'>
+
+  <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+    <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+
+    <div class="menu">
+
+      <ul id="menu-secondary-items" class="menu-secondary-items">
+        
+        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+          <a href="/categories/go">go</a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <ul class="social-media-icons">
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li>
+      <a href="mailto:giacomo.furlan@fastwebnet.it" data-animate-hover="pulse" class="email">
+        <i class="fa fa-envelope" title="email"></i>
+        <span class="screen-reader-text">email</span>
+      </a>
+    </li>
+    
+
+    
+    <li>
+      <a href="https://www.linkedin.com/in/giacomo-furlan-3b360760/" data-animate-hover="pulse" class="linkedin" target="_blank">
+        <i class="fa fa-linkedin" title="linkedin"></i>
+        <span class="screen-reader-text">linkedin</span>
+      </a>
+    </li>
+    
+
+    
+    <li>
+      <a href="https://stackoverflow.com/users/2579017/jack" data-animate-hover="pulse" class="stackoverflow" target="_blank">
+        <i class="fa fa-stack-overflow" title="stackoverflow"></i>
+        <span class="screen-reader-text">stackoverflow</span>
+      </a>
+    </li>
+    
+
+
+    
+    <li>
+      <a href="https://github.com/elegos" data-animate-hover="pulse" class="github" target="_blank">
+        <i class="fa fa-github" title="github"></i>
+        <span class="screen-reader-text">github</span>
+      </a>
+    </li>
+    
+
+
+    
+
+    
+    <li>
+      <a href="https://giacomofurlan.name/index.xml" data-animate-hover="pulse" class="rss" target="_blank">
+        <i class="fa fa-rss" title="rss"></i>
+        <span class="screen-reader-text">rss</span>
+      </a>
+    </li>
+    
+
+
+  </ul></div>
+
+        </div>
+
+        <div class="container">
+          <div id="title-info" class="title-info">
+  <div id='site-title' class='site-title'>
+    
+    <a href="/"> Giacomo Furlan </a>
+    </div>
+  </div>
+  <button id="toggle-navigation" class="toggle-navigation">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+  <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+    
+    <p class="site-description">Personal pensieve</p>
+    
+
+    <div class="menu">
+      <ul id="menu-primary-items" class="menu-primary-items">
+        
+        
+        <li id="menu-item" class='menu-item menu-item-type-custom menu-item-object-custom '>
+          <a href="https://giacomofurlan.name/">Home</a>
+          
+        </li>
+        
+        <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page '>
+          <a href="https://giacomofurlan.name/about/">About</a>
+          
+        </li>
+        
+        <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page '>
+          <a href="https://giacomofurlan.name/contact/">Get in touch</a>
+          
+        </li>
+        
+      </ul>
+    </div>
+
+  </div>
+
+        </div>
+      </header>
+
+      <div id="main" class="main" role="main">
+
+    <div class="archive-header">
+	<h1>
+		Tag: Error Handling
+		
+		<a href="https://giacomofurlan.name/tags/error-handling/index.xml" data-animate-hover="pulse" class="in-page-rss" target="_blank">
+            <i class="fa fa-rss" title="rss"></i>
+            <span class="screen-reader-text">rss</span>
+		</a>
+		
+	</h1>
+</div>
+
+<h1 class="screen-reader-text">Posts</h1>
+<div id="loop-container" class="loop-container">
+  
+	
+
+			<div class="post type-post status-publish format-standard hentry category-standard category-travel excerpt zoom full-without-featured odd excerpt">
+
+				
+
+				
+
+				<div class="excerpt-container">
+					<div class="excerpt-meta">
+						<span class="date">31 December 2017</span>	<span> / </span>
+
+						
+
+						<span class="author">
+							
+							<a href="https://giacomofurlan.name" title="Posts by Giacomo Furlan" rel="author">Giacomo Furlan</a>
+							
+						</span>
+						
+
+						 
+							<span> / </span>
+						<span class="category">
+							<a href="/categories/go">go</a>
+						</span>
+						
+					</div>
+							<div class='excerpt-header'>
+								<h2 class='excerpt-title'>
+									<a href="https://giacomofurlan.name/post/2017/12/31/error-handling-in-go/ "> Error handling in Go </a>
+								</h2>
+							</div>
+							<div class='excerpt-content'>
+								<article>
+									Most of the programming languages support multiple ways of handling errors, for example try-catching, value-checking, popping errors in the stack. Learning go I found the approach of this language is way different: you can let a function return an error (and eventual result(s)), thus not throwing any kind of error, and not returning “special values” like, for example, PHP’s json_decode (which can return true, false, NULL, stdClass or even an array!
+
+									<div class="more-link-wrapper"><a class="more-link" href="https://giacomofurlan.name/post/2017/12/31/error-handling-in-go/">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
+								</article>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
       </div>
-    </div> <!-- container -->
-</nav>
-<div class="clearfix"></div>
 
-  <div class="container">
-  	<div class="content">
-    	 
-
-<!-- title -->
-<div class="page-header">
-  <h1 class="archive-title-tag"><i class="fa fa-archive"></i> error handling</h1>
-</div>
-
-<div class="row page">
-  <!-- cols -->
-  
-  <div class="col-md-9">
-	
-
-	  <div id="top_search"></div>
-
-	  <div class="archive">
-		
-		
-		
-			
-			
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#2017">2017<b class="caret"></b></h4>
-			<ul id="2017" class="collapse in">
-			
-		
-		<li class="listing-item">
-		<span class="date_class"> 2017-12-31 </span> &raquo;
-		
-		   <span class="title"><a href="/2017/12/31/error-handling-in-go/" >Error handling in go</a></span>
-		
-		</li>			
-		
-		</ul>
-		</div>
-
-</div> <!-- col-md-9/col-md-12 -->
-
-
-<div class="col-md-3">
-	<div id="sidebar">
-	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
-
-
-		
-			
-	<div class="widget">
-		<h4>Categories</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/go/">go<span>1</span></a></li>
-		
-		</ul>
-	</div>
-
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/go/">go<span>1</span></a></li>
-		
-			<li><a href="/tags/error-handling/">error handling<span>1</span></a></li>
-		
-		 
-		</ul>
-	</div>
-
-
-		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
+      <footer id="site-footer" class="site-footer" role="contentinfo">
+	<h1>
     
-      <li>
-        <a href="/2017/12/31/error-handling-in-go/" ><i class="fa fa-file-o"></i>Error handling in go</a>
-      </li>
+    <a href=""> Giacomo Furlan </a>
     
-      <li>
-        <a href="/2017/12/31/hello-world/" ><i class="fa fa-file-o"></i>Hello World</a>
-      </li>
-    
-  </ul>
-</div>
+	</h1>
 
-		
 			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/elegos" title="My Github account." target="_blank"]);">My Github</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/elegos/nwn-toolset-go" title="Cross-platform NWN Toolset written in go." target="_blank"]);">NWN Toolset (go)</a></li>
-	
-	</ul>
-</div>
+			<p class="site-description">Personal pensieve</p>
+			
+
+		<div id="menu-footer" class="menu-container menu-footer" role="navigation">
+		<div class="menu">
+
+      <ul id="menu-footer-items" class="menu-footer-items">
+        
+</ul>
+
+</div>	</div>
+
+<ul class="social-media-icons">
+
+        
+
+        
 
 
+        
+
+        
+
+        
+        <li>
+        <a href="mailto:giacomo.furlan@fastwebnet.it"  class="email">
+            <i class="fa fa-envelope" title="email"></i>
+            <span class="screen-reader-text">email</span>
+        </a>
+        </li>
+        
+
+        
+        <li>
+        <a href="https://www.linkedin.com/in/giacomo-furlan-3b360760/" class="linkedin" target="_blank">
+            <i class="fa fa-linkedin" title="linkedin"></i>
+            <span class="screen-reader-text">linkedin</span>
+        </a>
+        </li>
+        
+
+        
+        <li>
+        <a href="https://stackoverflow.com/users/2579017/jack"  class="stackoverflow" target="_blank">
+            <i class="fa fa-stack-overflow" title="stackoverflow"></i>
+            <span class="screen-reader-text">stackoverflow</span>
+        </a>
+        </li>
+        
+
+
+        
+        <li>
+        <a href="https://github.com/elegos"  class="github" target="_blank">
+            <i class="fa fa-github" title="github"></i>
+            <span class="screen-reader-text">github</span>
+        </a>
+        </li>
+        
+
+
+        
+
+        
+        <li>
+        <a href="https://giacomofurlan.name/index.xml" data-animate-hover="pulse" class="rss" target="_blank">
+            <i class="fa fa-rss" title="rss"></i>
+            <span class="screen-reader-text">rss</span>
+        </a>
+        </li>
+        
+
+				</ul>	<div class="design-credit">
 		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
-
-
-
-
+		<p>&copy; 2018 Giacomo Furlan</p>
+		
 	</div>
-  </div>
-  <div class="container-narrow">
-  <footer> <p>
-  &copy; 2018 Giacomo Furlan
-  
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
-     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>.    
-</p>
- </footer>
-</div> <!-- container-narrow -->
-  
+</footer>
 
+    </div>
+    <script src="https://giacomofurlan.name/js/jquery.min.js"></script>
+<script src="https://giacomofurlan.name/js/jquerymigrate.js"></script>
+<script src="https://giacomofurlan.name/js/production.min.js"></script>
 
-  
-<a id="gotop" href="#">   
-  <span>⬆︎TOP</span>
-</a>
-
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-
-
-
-   <script type="text/javascript">      
-     var search_path = "search.xml";
-	 if (search_path.length == 0) {
-	 	search_path = "search.xml";
-	 }
-	 var path = "/" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-   </script>
-
-</body>
-   </html>
+  </body>
