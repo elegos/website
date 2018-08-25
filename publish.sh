@@ -44,4 +44,4 @@ fi
 
 git add .
 git commit -m "Site updated: $now"
-git push
+git push origin src
