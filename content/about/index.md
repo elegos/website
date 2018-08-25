@@ -27,6 +27,7 @@ This is not a complete list, but the abilities I daily use.
 - **Photographer**
 - **Cyclist**
 - **Traveler**
+- **Dreamer**
 
 ##### Agile methodologies (and mixes of them)
 
