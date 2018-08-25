@@ -1,0 +1,52 @@
+baseURL = "https://giacomofurlan.name"
+languageCode = "en-gb"
+title = "Giacomo Furlan"
+theme = "nederburg"
+disqusShortname = "giacomofurlan"
+googleAnalytics = ""
+paginate = 5
+
+[params]
+  slogan = "Personal pensieve"
+  description = "Personal website of Giacomo Furlan"
+  author = "Giacomo Furlan"
+  authorLink = "https://giacomofurlan.name"
+  bio = [
+    "Giacomo Furlan is a software engineer focused on complex backend architectures written in PHP and Golang.",
+    "His aim is to succesfully manage a team of collegues in order to achieve the company's goals in synergy, maximising the efforts."
+  ]
+  copyright = [
+    "&copy; 2018 Giacomo Furlan"
+  ]
+
+  # Contact page
+  email = "elegos@fastwebnet.it"
+
+
+  # Nav links
+  [[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "About"
+  url = "about/"
+  weight = 2
+
+  [[menu.main]]
+  name = "Get in touch"
+  url = "contact/"
+  weight = 3
+
+  [[menu.secondary]]
+  name = "Get in touch"
+  url = "contact/"
+  weight = 3
+
+  [params.social]
+  email = "giacomo.furlan@fastwebnet.it"
+  linkedin = "https://www.linkedin.com/in/giacomo-furlan-3b360760/"
+  stackoverflow = "https://stackoverflow.com/users/2579017/jack"
+  github = "https://github.com/elegos"
+  rss = true
