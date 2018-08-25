@@ -16,18 +16,22 @@ pushd public
 popd
 
 echo "Cleaning the public directory..."
-rm -rf `pwd`/public/*
+rm -rf public/*
 
 
 echo "Generating the static files..."
 hugo
 
+echo "Adding CNAME file for custom domain..."
+cp CNAME public/CNAME
+
 echo "Committing the new content."
 now=`date "+%Y-%m-%d %H:%M:%S"`
-cd public
-git add .
-git commit -m "Site updated: $now"
-git push origin master
+pushd public
+  git add .
+  git commit -m "Site updated: $now"
+  git push origin master
+popd
 
 echo -e "\nDone! Do you want to update the sources, too?"
 read i_am_sure
@@ -36,6 +40,7 @@ if [ "$i_am_sure" != "y" ]; then
   echo -e "\nok, bye!"
   exit 0
 fi
+
 
 git add .
 git commit -m "Site updated: $now"
