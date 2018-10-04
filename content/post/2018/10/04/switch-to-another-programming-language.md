@@ -33,16 +33,16 @@ ever want to switch to another, way less known technology?
 
 First of all, I think that the PHP language is awesome for prototyping and, working
 in the big data industry, I know for sure it's more than capable of sorting out
-most of the tasks of any complexity order, specially from version 7 and up, including
-an awesome core rewriting, allowing for blazing fast performances. I know and
-I'm aware of the PHP pros and cons. Generally speaking everyone that want to jump
+most of the tasks of any complexity order, specially from version 7 and up, which includes
+an awesome core rewriting, allowing blazing fast performances. I know and I'm
+aware of the PHP pros and cons. Generally speaking everyone that want to jump
 into another boat should have this clear in mind: no programming language is
 perfect, and is the developer who always shows the most weaknesses.
 
 That said, I started feeling unconfortable with the code written by myself and my
 collegues, something that I totally ignored when I first read about in online blogs
 and magazines years ago, something that I found on the opposite good and powerful:
-something called "*type hierarchy*".
+something called *type hierarchy*.
 
 > *A class hierarchy or inheritance tree in computer science is a classification
 > of object types, denoting objects as the instantiations of classes (class is
@@ -56,24 +56,24 @@ something called "*type hierarchy*".
 
 The page also states that class hierarchy (or generally type hierarchy in our case),
 is very similar to taxonomy. From a human's point of view is thus quite natural:
-an apple is a fruit, which is a vegetable, which is a living entity.
+an apple is a fruit, which is a vegetable, which is a living thing.
 
 *But programmers are evil...*
 
-> *But what happens when the team starts to create type hierarchies on the services?
-> That’s my point, [...], where you should start doubting about your coding skills,
+> *[...] what happens when the team starts to create type hierarchies on the services?
+> That’s the point, [...], where you should start doubting about your coding skills,
 > [...] where you start loosing the grasp on the software’s logics.*
 
 If you're a PHP programmer, how many times have you ever wanted PHP had the possibility
 to inherit a class from multiple ones? Oh wait, traits are there for this! And how
 many times have you found you were sub-classing a tree of classes that God only knows
 what is the mother of them all? This is what happens in (poorly?) structured programs
-when you have to add a new functionality on top of another one. But that's fine,
-until this kind of hierarchy is *passive* only. You're just adding new data and
-new setters and getters. But what happens when the team starts to create type hierarchies
-on the services? That's my point, my friend who's still reading, where you should
-start doubting about your coding skills. That's the point where you start loosing
-the grasp on the software's logics.
+when you have to add a new functionality on top of another one. And that's fine,
+until this kind of hierarchy is *passive* only: you're just adding new attributes and
+new methods to access them. But what happens when the team starts to create class
+hierarchies on the services? That's the point, my friend who's still reading, where
+you should start doubting about your coding skills. That's the point where you
+start loosing the grasp on the software's logics.
 
 Now that's too late, you start thinking about a refactoring, but it's huge and difficult
 because even if the input and the final output should be the same, you have to
@@ -97,7 +97,8 @@ being put under a spotlight every time - yeah still talking about *evil programm
 Another solution may be to **avoid using programming languages that let the developer
 be so free**.
 
-Not being a go post, I won't list and talk about my new language choice: [golang](https://golang.org).
+Not being a golang post, I won't list the benefints of this particular language
+or talk about my new language choice: [golang](https://golang.org).
 
 ### Take the decision to stop using your main programming language and force yourself using a new one
 
@@ -114,7 +115,7 @@ it indefinitely.
 And this is what I'm going to do: my next big project I'm going to write will be
 written in Go. I will for sure slow down the development at the beginning, I'll
 have troubles finding Go programmers (or people willing to learn it) in my country,
-and probably I'll have to rewrite it some point in the future, but still... I've
+and probably I'll have to rewrite it at some point in the future, but still... I've
 started programming in go one year ago, but I think my journey has just began today,
 writing this very same post.
 
