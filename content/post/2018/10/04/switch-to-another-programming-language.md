@@ -27,9 +27,9 @@ most of the common PHP functions, frameworks, typical service infrastructures et
 PHP is my confort zone, and I consider myself a PHP professional. So why should I
 ever want to switch to another, way less known technology?
 
-> *Generally speaking everyone that want to jump into another boat should have this
-> clear in mind: no programming language is perfect, but most of the times it's up
-> to the developer to show the most weaknesses.*
+> *Generally speaking everyone that want to jump into another boat should have
+> this clear in mind: no programming language is perfect, and is the developer
+> who always shows the most weaknesses.*
 
 First of all, I think that the PHP language is awesome for prototyping and, working
 in the big data industry, I know for sure it's more than capable of sorting out
@@ -37,7 +37,7 @@ most of the tasks of any complexity order, specially from version 7 and up, incl
 an awesome core rewriting, allowing for blazing fast performances. I know and
 I'm aware of the PHP pros and cons. Generally speaking everyone that want to jump
 into another boat should have this clear in mind: no programming language is
-perfect, but most of the times it's up to the developer to show the most weaknesses.
+perfect, and is the developer who always shows the most weaknesses.
 
 That said, I started feeling unconfortable with the code written by myself and my
 collegues, something that I totally ignored when I first read about in online blogs
