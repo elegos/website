@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on Giacomo Furlan</title>
+    <link>https://giacomofurlan.name/tags/php/</link>
+    <description>Recent content in Php on Giacomo Furlan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 04 Oct 2018 17:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://giacomofurlan.name/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Switch to another programming language?</title>
+      <link>https://giacomofurlan.name/post/2018/10/04/switch-to-another-programming-language/</link>
+      <pubDate>Thu, 04 Oct 2018 17:15:00 +0200</pubDate>
+      
+      <guid>https://giacomofurlan.name/post/2018/10/04/switch-to-another-programming-language/</guid>
+      <description>First and foremost I consider myself a software architect and engineer. My professional carreer let me focus, from a programming point of view, on web technologies, mostly the common PHP-JS stack (including obviously HTML and CSS). At least here in Italy most of the startups live on PHP and NodeJS, while other structured companies prefere Java and .NET technologies, which I all tried in my professional experience. Today I&amp;rsquo;m going to write a couple of lines on why I&amp;rsquo;d really like to go straight with Golang, or better why I&amp;rsquo;m seriosuly considering to switch to a new programming language for my personal projects and possibly affecting my job applications.</description>
+    </item>
+    
+  </channel>
+</rss>
