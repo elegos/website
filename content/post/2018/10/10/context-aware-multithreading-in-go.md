@@ -10,9 +10,9 @@ tags: ["go", "multi-threading", "signals", "context"]
 ---
 
 Multi-threading has always been the novice programmer's scarecrow, and even
-professionals might have never really written asyncrhonous code before, for
+professionals might have never really written   asynchronous code before, for
 a number of reasons: first of all because it's more complicated to think
-in an asyncrhonous world! Golang has multi-threading in its heart, and this
+in an   asynchronous world! Golang has multi-threading in its heart, and this
 is a big deal because it simplifies a number of things.
 
 <!--more-->
@@ -27,7 +27,7 @@ The code in this article contains [go routines](https://tour.golang.org/concurre
 [structs](https://tour.golang.org/moretypes/2) and
 [methods](https://tour.golang.org/methods/1).
 
-## First iteration: asyncrhonous functions
+## First iteration:   asynchronous functions
 
 In order to understand the basic concepts, let's read the following pseudo-code:
 
