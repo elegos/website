@@ -18,9 +18,9 @@
       
       <guid>https://giacomofurlan.name/post/2018/10/10/context-aware-multithreading-in-go/</guid>
       <description>&lt;p&gt;Multi-threading has always been the novice programmer&amp;rsquo;s scarecrow, and even
-professionals might have never really written asyncrhonous code before, for
+professionals might have never really written   asynchronous code before, for
 a number of reasons: first of all because it&amp;rsquo;s more complicated to think
-in an asyncrhonous world! Golang has multi-threading in its heart, and this
+in an   asynchronous world! Golang has multi-threading in its heart, and this
 is a big deal because it simplifies a number of things.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
