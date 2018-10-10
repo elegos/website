@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on Giacomo Furlan</title>
-    <link>https://giacomofurlan.name/categories/go/</link>
-    <description>Recent content in Go on Giacomo Furlan</description>
+    <title>Signals on Giacomo Furlan</title>
+    <link>https://giacomofurlan.name/tags/signals/</link>
+    <description>Recent content in Signals on Giacomo Furlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 10 Oct 2018 02:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://giacomofurlan.name/categories/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://giacomofurlan.name/tags/signals/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -24,15 +24,6 @@ in an asyncrhonous world! Golang has multi-threading in its heart, and this
 is a big deal because it simplifies a number of things.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Error handling in Go</title>
-      <link>https://giacomofurlan.name/post/2017/12/31/error-handling-in-go/</link>
-      <pubDate>Sun, 31 Dec 2017 12:00:00 +0200</pubDate>
-      
-      <guid>https://giacomofurlan.name/post/2017/12/31/error-handling-in-go/</guid>
-      <description>Most of the programming languages support multiple ways of handling errors, for example try-catching, value-checking, popping errors in the stack. Learning go I found the approach of this language is way different: you can let a function return an error (and eventual result(s)), thus not throwing any kind of error, and not returning “special values” like, for example, PHP’s json_decode (which can return true, false, NULL, stdClass or even an array!</description>
     </item>
     
   </channel>

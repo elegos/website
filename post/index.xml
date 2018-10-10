@@ -6,10 +6,25 @@
     <description>Recent content in Posts on Giacomo Furlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 04 Oct 2018 17:15:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 10 Oct 2018 02:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://giacomofurlan.name/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Context-aware multithreading in go</title>
+      <link>https://giacomofurlan.name/post/2018/10/10/context-aware-multithreading-in-go/</link>
+      <pubDate>Wed, 10 Oct 2018 02:00:00 +0200</pubDate>
+      
+      <guid>https://giacomofurlan.name/post/2018/10/10/context-aware-multithreading-in-go/</guid>
+      <description>&lt;p&gt;Multi-threading has always been the novice programmer&amp;rsquo;s scarecrow, and even
+professionals might have never really written asyncrhonous code before, for
+a number of reasons: first of all because it&amp;rsquo;s more complicated to think
+in an asyncrhonous world! Golang has multi-threading in its heart, and this
+is a big deal because it simplifies a number of things.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Switch to another programming language?</title>
