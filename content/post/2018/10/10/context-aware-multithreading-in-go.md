@@ -176,12 +176,9 @@ func (r *MyRunner) Run(ctx context.Context) {
   for loop {
     fmt.Printf("Executing go routine %s...\n", r.Name)
     <-time.After(2 * time.Second) // hard work here! Block for two seconds
-
-    // select the first that occours
-    select {
-    case <-ctx.Done(): // context is done! exit the loop
-      loop = false
-    case <-time.After(0): // wait for 0 seconds (just to fill the channel)
+    
+    if ctx.Err() == context.Canceled {
+      break
     }
   }
 
@@ -193,11 +190,8 @@ func (r *MyRunner) Run(ctx context.Context) {
 Essentially the meaning of this `Run(context.Context)` method is to loop indefinitely
 until the context is "done". It might be a long process, or a finite loop, or
 whatever function that must be executed asynchronously. At the end of each loop's
-cycle, `select` is used to select the first channel that's set: first we check
-for the context, and if it's done we break from the loop altering the guard condition.
-Otherwise we wait for 0 seconds, or in other words we proceed with another cycle
-immediately as the channel will be instantly triggered (but being in second
-position, the case `ctx.Done()` will have the precedence).
+cycle, we check against the state of the context: if it's been canceled, we break
+the loop and gracefully exit.
 
 Wrapping things up, it all comes to this code:
 
@@ -221,11 +215,9 @@ func (r *MyRunner) Run(ctx context.Context) {
   for loop {
     fmt.Printf("Executing go routine %s...\n", r.Name)
     <-time.After(2 * time.Second)
-
-    select {
-    case <-ctx.Done():
-      loop = false
-    case <-time.After(0):
+    
+    if ctx.Err() == context.Canceled {
+      break
     }
   }
 
