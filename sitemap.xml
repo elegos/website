@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://giacomofurlan.name/post/2018/10/10/context-aware-multithreading-in-go/</loc>
+    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/post/2018/10/04/switch-to-another-programming-language/</loc>
+    <lastmod>2018-10-04T17:15:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/contact/</loc>
+    <lastmod>2018-08-25T01:49:25+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/about/</loc>
+    <lastmod>2018-08-25T01:41:18+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/post/2017/12/31/error-handling-in-go/</loc>
+    <lastmod>2017-12-31T12:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/carreer/</loc>
+    <lastmod>2018-10-04T17:15:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/categories/carreer/</loc>
+    <lastmod>2018-10-04T17:15:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/categories/</loc>
+    <lastmod>2018-10-04T17:15:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/context/</loc>
+    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/error-handling/</loc>
+    <lastmod>2017-12-31T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/</loc>
+    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/go/</loc>
+    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/categories/go/</loc>
+    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/multi-threading/</loc>
+    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/php/</loc>
+    <lastmod>2018-10-04T17:15:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/post/</loc>
+    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/signals/</loc>
+    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/</loc>
+    <lastmod>2018-10-04T17:15:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
