@@ -9,12 +9,12 @@ categories: ["go"]
 tags: ["go", "networking", "multi-threading", "socket"]
 ---
 
-Listening on sockets allow an application to connect to other devices.
+Listening on sockets allows an application to connect to other devices.
 We use this technique daily visiting websites, or connecting to a series of
 services via the HTTP(s) protocol. Go comes with a standard library to manage
-HTTP connections, but from time to time, that's not the most effective way
-to pass data between two systems. This post will show you how to listen on
-sockets handling multiple connections.
+HTTP connections, but, from time to time, that's not the most effective way
+to exchange data between two or more systems. This post will show you how to
+listen on sockets handling multiple connections.
 
 <!--more-->
 
@@ -148,10 +148,10 @@ loop in a real case scenario.
 
 As previously written, both listeners and connections are thread-blockers. If
 we try to manage an entire connection before creating a new listener, only one
-client might connect at the same time; note that this could be right for application's
-design, though not the most common one. Let's see how wrapping the previous code
-together looks like, adding some go routines to let the most connections be created
-at the same time.
+client might connect at the same time; note that this could be right per application's
+design, though that would be a very particular case. Let's see how wrapping the
+previous code together looks like, adding some go routines to let the most
+connections be created and managed at the same time.
 
 ```go
 package main
@@ -206,6 +206,8 @@ func (handler *UnixHandler) Listen(ctx context.Context) error {
 
       return err
     }
+
+    // Now we've got a valid connection, let's manage it
     defer conn.Close()
     // Close the connection upon context canceling
     go func() {
@@ -239,12 +241,12 @@ func (handler *UnixHandler) Listen(ctx context.Context) error {
         // add it to the wait group
         messageProcessingWaitGroup.Add(1)
         // Do whatever you want with the data asynchronously
-        // (for example send it to a message handler).
+        // (for example process it to a message handler).
         // In this way the application will be able to accept
         // other messages in the same connection without waiting
         // for the message to be completely processed.
         //
-        // Some designs may require that the messages are being processed
+        // Some designs might require that the messages are being processed
         // synchronously, so in that case just don't wrap it in a go routine.
         go func(bytes []byte) {
           // Handle the message
@@ -283,8 +285,8 @@ func main() {
 }
 ```
 
-If you're compiling this code in a \*nix environment (Linux, OSX, etc), you can
-try to send data to the application using netcat:
+If you're running this application in a \*nix environment (Linux, OSX, etc), you
+can try to send data to the application using netcat:
 
 ```bash
 nc -U /path/to/tmp.sock
