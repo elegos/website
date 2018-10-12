@@ -6,10 +6,26 @@
     <description>Recent content in Go on Giacomo Furlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 10 Oct 2018 02:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 12 Oct 2018 02:30:00 +0200</lastBuildDate>
     
 	<atom:link href="https://giacomofurlan.name/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Listening on sockets using Go</title>
+      <link>https://giacomofurlan.name/post/2018/10/12/listening-on-sockets-with-go/</link>
+      <pubDate>Fri, 12 Oct 2018 02:30:00 +0200</pubDate>
+      
+      <guid>https://giacomofurlan.name/post/2018/10/12/listening-on-sockets-with-go/</guid>
+      <description>&lt;p&gt;Listening on sockets allow an application to connect to other devices.
+We use this technique daily visiting websites, or connecting to a series of
+services via the HTTP(s) protocol. Go comes with a standard library to manage
+HTTP connections, but from time to time, that&amp;rsquo;s not the most effective way
+to pass data between two systems. This post will show you how to listen on
+sockets handling multiple connections.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Context-aware multithreading in go</title>

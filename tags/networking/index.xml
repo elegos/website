@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Multi Threading on Giacomo Furlan</title>
-    <link>https://giacomofurlan.name/tags/multi-threading/</link>
-    <description>Recent content in Multi Threading on Giacomo Furlan</description>
+    <title>Networking on Giacomo Furlan</title>
+    <link>https://giacomofurlan.name/tags/networking/</link>
+    <description>Recent content in Networking on Giacomo Furlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Fri, 12 Oct 2018 02:30:00 +0200</lastBuildDate>
     
-	<atom:link href="https://giacomofurlan.name/tags/multi-threading/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://giacomofurlan.name/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,21 +23,6 @@ services via the HTTP(s) protocol. Go comes with a standard library to manage
 HTTP connections, but from time to time, that&amp;rsquo;s not the most effective way
 to pass data between two systems. This post will show you how to listen on
 sockets handling multiple connections.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Context-aware multithreading in go</title>
-      <link>https://giacomofurlan.name/post/2018/10/10/context-aware-multithreading-in-go/</link>
-      <pubDate>Wed, 10 Oct 2018 02:00:00 +0200</pubDate>
-      
-      <guid>https://giacomofurlan.name/post/2018/10/10/context-aware-multithreading-in-go/</guid>
-      <description>&lt;p&gt;Multi-threading has always been the novice programmer&amp;rsquo;s scarecrow, and even
-professionals might have never really written   asynchronous code before, for
-a number of reasons: first of all because it&amp;rsquo;s more complicated to think
-in an   asynchronous world! Golang has multi-threading in its heart, and this
-is a big deal because it simplifies a number of things.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

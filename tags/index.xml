@@ -41,7 +41,7 @@
     <item>
       <title>Go</title>
       <link>https://giacomofurlan.name/tags/go/</link>
-      <pubDate>Wed, 10 Oct 2018 02:00:00 +0200</pubDate>
+      <pubDate>Fri, 12 Oct 2018 02:30:00 +0200</pubDate>
       
       <guid>https://giacomofurlan.name/tags/go/</guid>
       <description></description>
@@ -50,9 +50,18 @@
     <item>
       <title>Multi Threading</title>
       <link>https://giacomofurlan.name/tags/multi-threading/</link>
-      <pubDate>Wed, 10 Oct 2018 02:00:00 +0200</pubDate>
+      <pubDate>Fri, 12 Oct 2018 02:30:00 +0200</pubDate>
       
       <guid>https://giacomofurlan.name/tags/multi-threading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://giacomofurlan.name/tags/networking/</link>
+      <pubDate>Fri, 12 Oct 2018 02:30:00 +0200</pubDate>
+      
+      <guid>https://giacomofurlan.name/tags/networking/</guid>
       <description></description>
     </item>
     
@@ -71,6 +80,15 @@
       <pubDate>Wed, 10 Oct 2018 02:00:00 +0200</pubDate>
       
       <guid>https://giacomofurlan.name/tags/signals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Socket</title>
+      <link>https://giacomofurlan.name/tags/socket/</link>
+      <pubDate>Fri, 12 Oct 2018 02:30:00 +0200</pubDate>
+      
+      <guid>https://giacomofurlan.name/tags/socket/</guid>
       <description></description>
     </item>
     

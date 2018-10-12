@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://giacomofurlan.name/post/2018/10/12/listening-on-sockets-with-go/</loc>
+    <lastmod>2018-10-12T02:30:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://giacomofurlan.name/post/2018/10/10/context-aware-multithreading-in-go/</loc>
     <lastmod>2018-10-10T02:00:00+02:00</lastmod>
   </url>
@@ -59,25 +64,31 @@
   
   <url>
     <loc>https://giacomofurlan.name/</loc>
-    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <lastmod>2018-10-12T02:30:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://giacomofurlan.name/tags/go/</loc>
-    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <lastmod>2018-10-12T02:30:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://giacomofurlan.name/categories/go/</loc>
-    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <lastmod>2018-10-12T02:30:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://giacomofurlan.name/tags/multi-threading/</loc>
-    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <lastmod>2018-10-12T02:30:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/networking/</loc>
+    <lastmod>2018-10-12T02:30:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,13 +100,19 @@
   
   <url>
     <loc>https://giacomofurlan.name/post/</loc>
-    <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <lastmod>2018-10-12T02:30:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://giacomofurlan.name/tags/signals/</loc>
     <lastmod>2018-10-10T02:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://giacomofurlan.name/tags/socket/</loc>
+    <lastmod>2018-10-12T02:30:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
